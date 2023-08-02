@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cd __SIMULATION_DIR__
+
+nohup python -m pylag.main -c pylag.cfg > ./std.out 2> ./std.err < /dev/null &
