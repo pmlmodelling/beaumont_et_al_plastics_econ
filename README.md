@@ -3,7 +3,7 @@
 This repository contains the core software used to perform
 the plastic transfer and economic modelling. Separate details
 on each can be found in the READMEs in the respective
-sub-directories. Also includes are the derived plastic stock matrices
+sub-directories. Also included are the derived plastic stock matrices
 for the years 2012, 2013 and 2014.
 
 ## Contents
