@@ -20,6 +20,11 @@ The directory contians the following core scripts, which should be edited/run in
 
 * `project_paths.py` - Edit to set paths.
 * `cython_helpers.pyx` and `build_cython_modules.py` - helper functions written in Cython for speed. The corresponding extension module should first be built by executing the build script and saving the shared library in place.
+
+```bash
+python build_cython_modules.py build_ext --inplace
+```
+
 * `add_countries_to_meijer_2021_river_data.py` - Add country info to the Meijer river data.
 * `create_ocean_grid_metrics_file.py`` - Create ocean grid metrics file needed by PyLag.
 * `create_atmosphere_grid_metrics_file.py`` - Create atmosphere grid metrics file needed by PyLag
