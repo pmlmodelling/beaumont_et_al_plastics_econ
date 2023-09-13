@@ -2,15 +2,20 @@
 
 We use v11 of the marine boundaries data set, which is available from:
 https://www.marineregions.org.
+
+Notes
+-----
+- This script takes an exceptionally long time to run for certain countries,
+and in particular for Canada. For reference, on a 24 thread machine, it took
+18 hours to run for Canada.
+
 """
 import os
 import numpy as np
 from multiprocessing import Pool
 import pathlib
-import geopandas
 import shapely
 from netCDF4 import Dataset
-from matplotlib import pyplot as plt
 from cartopy.mpl.gridliner import LONGITUDE_FORMATTER, LATITUDE_FORMATTER
 
 from marine_boundaries import read_shapefile, get_eez_region
@@ -158,21 +163,6 @@ for boundary_type in boundary_types:
         else:
             raise ValueError(f'Support for boundary type {boundary_type} is '\
                              f'yet to be implemented')
-
-    # Visualise regions
-    plot_regions = False
-    if plot_regions:
-        world = geopandas.read_file(geopandas.datasets.get_path('naturalearth_lowres'))
-        for country in na_countries:
-            # Plot world map
-            ax = world.plot(color='white', edgecolor='black')
-
-            # Overlay EEZ
-            regions[country].plot(ax=ax)
-
-            ax.set_title(f'{country}')
-
-    plt.show()
 
     # Associate grid elements with countries
     flag_elements_switch = True
