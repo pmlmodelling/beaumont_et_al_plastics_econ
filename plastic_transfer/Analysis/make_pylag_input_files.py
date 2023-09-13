@@ -1,3 +1,5 @@
+""" Make PyLag input files"""
+
 import os
 import numpy as np
 from netCDF4 import Dataset
@@ -16,8 +18,6 @@ from marine_boundaries import remove_us_west_coast_rivers
 from marine_boundaries import remove_french_guiana_rivers
 
 from shared import na_countries
-
-from plot_utils import make_plot
 
 
 # What fraction of all river inputs should be accounted for?
@@ -119,7 +119,6 @@ grid_points = np.column_stack([x, y, z])
 tree = cKDTree(grid_points)
 
 # Write river data to file. One file per country, one group per river.
-plot = True
 for _gdf, country in zip(gdf_list, na_countries):
 
     # Get river coordinates in radians
@@ -137,31 +136,6 @@ for _gdf, country in zip(gdf_list, na_countries):
     # River input coordinates snapped to centroids on the model grid
     lon_rivers_on_grid = lonc[indices]
     lat_rivers_on_grid = latc[indices]
-
-    # Plot locations to check
-    # -----------------------
-    if plot:
-        print('\nPlotting data for {}'.format(country))
-
-        # Create figure
-        fig, ax = make_plot()
-
-        # Extents are global
-        extents = np.array([-180, 180, -90, 90])
-        ax.set_extent(extents, ccrs.PlateCarree())
-
-        # Add coastline
-        ax.add_feature(cfeature.NaturalEarthFeature(category='physical', name='coastline',
-            scale = '10m', facecolor = 'none', edgecolor = 'black', linewidth=.5))
-
-        # Add borders
-        ax.add_feature(cfeature.BORDERS)
-
-        # Add on river data
-        ax.scatter(lon_rivers_on_grid, lat_rivers_on_grid, c='b', s=10)
-
-        ax.set_title('{} river locations'.format(country))
-
 
     # Convert to UTM coordinates
     eastings = []
@@ -217,8 +191,4 @@ for _gdf, country in zip(gdf_list, na_countries):
     # Write emissions data to file
     # ----------------------------
     _gdf.to_csv(f'{emissions_dir}/emissions_{country}.csv')
-
-# If plot, display these
-if plot:
-    plt.show()
 
