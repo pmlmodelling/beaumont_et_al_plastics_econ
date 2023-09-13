@@ -33,7 +33,6 @@ import pathlib
 import stat
 import configparser
 
-from shared import archer_nodes, archer_queue, archer_wall_time
 from project_paths import cmems_data_dir, era5_data_dir, simulations_dir
 
 def get_root_run_directory():
