@@ -1,0 +1,35 @@
+netcdf era5_winds_2000_01 {
+dimensions:
+	longitude = 1440 ;
+	latitude = 721 ;
+	time = 744 ;
+variables:
+	float longitude(longitude) ;
+		longitude:units = "degrees_east" ;
+		longitude:long_name = "longitude" ;
+	float latitude(latitude) ;
+		latitude:units = "degrees_north" ;
+		latitude:long_name = "latitude" ;
+	int time(time) ;
+		time:units = "hours since 1900-01-01 00:00:00.0" ;
+		time:long_name = "time" ;
+		time:calendar = "gregorian" ;
+	short u10(time, latitude, longitude) ;
+		u10:scale_factor = 0.00095278591041739 ;
+		u10:add_offset = 1.79251524522839 ;
+		u10:_FillValue = -32767s ;
+		u10:missing_value = -32767s ;
+		u10:units = "m s**-1" ;
+		u10:long_name = "10 metre U wind component" ;
+	short v10(time, latitude, longitude) ;
+		v10:scale_factor = 0.000935080890633107 ;
+		v10:add_offset = -0.608759166421879 ;
+		v10:_FillValue = -32767s ;
+		v10:missing_value = -32767s ;
+		v10:units = "m s**-1" ;
+		v10:long_name = "10 metre V wind component" ;
+
+// global attributes:
+		:Conventions = "CF-1.6" ;
+		:history = "2022-09-16 17:18:09 GMT by grib_to_netcdf-2.27.0: grib_to_netcdf ./tmp/era5_winds_2000_01.grib -o ./netcdf/era5_winds_2000_01.nc" ;
+}
