@@ -27,9 +27,9 @@ python build_cython_modules.py build_ext --inplace
 
 * `add_countries_to_meijer_2021_river_data.py` - Add country info to the Meijer river data.
 * `create_ocean_grid_metrics_file.py` - Create ocean grid metrics file needed by PyLag.
-* `create_atmosphere_grid_metrics_file.py`` - Create atmosphere grid metrics file needed by PyLag
+* `create_atmosphere_grid_metrics_file.py` - Create atmosphere grid metrics file needed by PyLag
 * `make_pylag_input_files.py` - Script to make particle initial positions files needed by PyLag.
 * `configure_pylag_simulations.py` - Script to configure PyLag simulations. This also creates run script(s) in your simulations directory, which must be executed.
-* `associate_grid_elements_with_marine_boundaries.py` - Script which associated ocean elements with EEZs. This is used to simplify the calculation of stocks.
+* `associate_grid_elements_with_marine_boundaries.py` - Script which associates ocean elements with EEZs. This is used to simplify the calculation of stocks.
 * `compute_connectivity_metrics.py` - Script which flags whether or not particles are in a given EEZ at a given point in time. The emitting country is passed in as a command line argument (e.g. Belgium).
 * `compute_plastic_stock_in_eezs.py` - Script which computes the mass of plastic in each EEZ.
