@@ -31,7 +31,7 @@ from project_paths import meijer_data_dir as data_dir
 path_to_plastics_data = f'{data_dir}/Meijer2021_midpoint_emissions.shp'
 
 # Make directory in which to store derived plastics data
-output_dir = './Derived_data/meijer_midpoint_emissions'
+output_dir = '../Derived_data/meijer_midpoint_emissions'
 pathlib.Path(output_dir).mkdir(parents=True, exist_ok=True)
 
 # Path to file which we will create. 
