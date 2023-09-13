@@ -8,7 +8,7 @@ The plastic transfer code will only run in a Linux/Unix environment. Due to the 
 
 ## Particle tracking software
 
-All particle tracking simulations were run using the particle tracking model [PyLag](https://github.com/pmlmodelling/pylag). PyLag's code is open source and free to use. Detailed installation instructions for PyLag can be found in [PyLag's online documenation](https://pylag.readthedocs.io/en/latest/). The core simulations performed in the study follow similar configuration steps to those described in [PyLag's online tutorials](https://pylag.readthedocs.io/en/latest/examples/index.html). The tutorials provide a detailed description of how the model is configured, and include direct links to pre-prepared driving data. As such, the tutorials represent a good starting point for learning how to use the model, and a demonstration of how it is used.
+All particle tracking simulations were run using the particle tracking model [PyLag](https://github.com/pmlmodelling/pylag). PyLag's code is open source and free to use. Detailed installation instructions for PyLag can be found in [PyLag's online documenation](https://pylag.readthedocs.io/en/latest/). The core simulations performed in the study follow similar configuration steps to those described in [PyLag's online tutorials](https://pylag.readthedocs.io/en/latest/examples/index.html). The tutorials provide a detailed description of how the model is configured, and include direct links to pre-prepared driving data. As such, the tutorials represent a good starting point for learning how to use the model, and a demonstration of how it is used. All of the demonstrators run in under 10 minutes on a standard laptop.
 
 ## Required input data
 
