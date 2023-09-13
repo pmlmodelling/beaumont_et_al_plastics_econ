@@ -44,13 +44,13 @@ from project_paths import cmems_data_dir, era5_data_dir, simulations_dir
 def get_root_run_directory():
     root_dir = simulations_dir
 
-    return root_dir
+    return os.path.abspath(root_dir)
 
 
 def get_input_paths():
-    inputs_dir = '../Inputs'
-    ocean_forcing_dir = cmems_data_dir
-    atmos_forcing_dir = era5_data_dir
+    inputs_dir = os.path.abspath('../Inputs')
+    ocean_forcing_dir = os.path.abspath(cmems_data_dir)
+    atmos_forcing_dir = os.path.abspath(era5_data_dir)
 
     return inputs_dir, ocean_forcing_dir, atmos_forcing_dir
 
