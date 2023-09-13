@@ -10,6 +10,10 @@ of the receiving country.
 4) This operation is repeated for each day in the year.
 5) The output of the previous step is saved to file. From this, the
 annual mean is calculated.
+
+Usage
+-----
+python compute_plastic_stock_in_eezs.py -r <region> -y <year> -m <month>
 """
 import sys
 import numpy as np
