@@ -62,7 +62,7 @@ def process_receiving_region(region, year, month, num_threads=8):
     weights, weights_decay_coefs = get_weights(n_particles_prz, na_countries)
 
     # Read in valid boundary elements for the receiving region
-    bdy_dir = './Derived_data/grid_elements/EEZ'
+    bdy_dir = '../Derived_data/grid_elements/EEZ'
     bdy_file_name = f'{bdy_dir}/grid_elements_for_{region}_EEZ_boundary.csv'
     bdy_elements = np.fromfile(bdy_file_name, sep=',')
     bdy_elements = np.sort(np.array(bdy_elements, dtype=np.int32))
@@ -140,7 +140,7 @@ def process_receiving_region(region, year, month, num_threads=8):
     pdf['All countries'] = pdf.sum(axis=1, numeric_only=True)
 
     # Create a directory in which to save the outputs
-    out_dir = f"./Derived_data/plastic_stock/{region}/{year}/{month:02}"
+    out_dir = f"../Derived_data/plastic_stock/{region}/{year}/{month:02}"
     pathlib.Path(out_dir).mkdir(parents=True, exist_ok=True)
     out_file = f"{out_dir}/plastic_stock_in_{region}_{year}_{month:02}.pkl"
     pdf.to_pickle(out_file)

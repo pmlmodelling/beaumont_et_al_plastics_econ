@@ -42,17 +42,17 @@ use_french_guiana_rivers = False
 #na_countries = ['France']
 
 # Read in plastics data
-meijer_dir = './Derived_data/meijer_midpoint_emissions'
+meijer_dir = '../Derived_data/meijer_midpoint_emissions'
 gdf = geopandas.read_file(f'{meijer_dir}/Meijer2021_midpoint_emissions_with_countries.shp')
 
 # Rename column
 gdf = gdf.rename(columns={'dots_exten': 'Plastic emissions'})
 
 # Path for grid metrics file(s)
-grid_metrics_1_12_deg = './Inputs/grid_metrics/grid_metrics_surface_ocean.nc'
+grid_metrics_1_12_deg = '../Inputs/grid_metrics/grid_metrics_surface_ocean.nc'
 
 # Create positions and volume data dirs if they have not been created already
-output_root_dir = f'./Inputs/{n_particles_target}_particles'
+output_root_dir = f'../Inputs/{n_particles_target}_particles'
 if not os.path.isdir(output_root_dir):
     os.mkdir(output_root_dir)
 

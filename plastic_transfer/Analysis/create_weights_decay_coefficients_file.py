@@ -56,5 +56,5 @@ for day_number in data['Day number']:
 
 # Save the dictionary to file
 df = pandas.DataFrame(data)
-df.to_pickle(f'./Derived_data/particle_weights/{n_particles}_particles/weights_decay_coefficients_per_day.pkl')
+df.to_pickle(f'../Derived_data/particle_weights/{n_particles}_particles/weights_decay_coefficients_per_day.pkl')
 #df.to_pickle(f'../Derived_data/particle_weights/{n_particles}_particles/weights_decay_coefficients_per_day_1995.pkl')

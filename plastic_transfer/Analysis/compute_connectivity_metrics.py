@@ -51,7 +51,7 @@ def process_emitting_country(emitting_country, year_str, month_str):
 
     # Output file
     # -----------
-    root_out_dir = f'./Derived_data/connectivity/{scenario}'
+    root_out_dir = f'../Derived_data/connectivity/{scenario}'
     year_out_dir = f'{root_out_dir}/{year_str}'
     month_out_dir = f'{year_out_dir}/{month_str}'
     pathlib.Path(month_out_dir).mkdir(parents=True, exist_ok=True)
@@ -96,7 +96,7 @@ def process_emitting_country(emitting_country, year_str, month_str):
             continue 
 
         # Read in valid boundary elements for the receiving country
-        bdy_dir = './Derived_data/grid_elements/EEZ'
+        bdy_dir = '../Derived_data/grid_elements/EEZ'
         bdy_file_name = f'{bdy_dir}/grid_elements_for_{receiving_region}_EEZ_boundary.csv'
         bdy_elements = np.fromfile(bdy_file_name, sep=',')
         bdy_elements = np.sort(np.array(bdy_elements, dtype=np.int32))

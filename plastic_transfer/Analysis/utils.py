@@ -190,7 +190,7 @@ def get_connectivity_file_list(connectivity_root_dir, emissions_start_date,
 
 def get_weights(n_particles_prz, na_countries):
     # Directory for particle weights
-    weights_dir = (f'./Derived_data/particle_weights/'
+    weights_dir = (f'../Derived_data/particle_weights/'
                    f'{n_particles_prz}_particles/monthly')
 
     weights = {}

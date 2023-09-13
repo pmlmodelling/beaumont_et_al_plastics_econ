@@ -14,7 +14,7 @@ from project_paths import era5_data_dir
 
 in_file = f'{era5_data_dir}/era5_winds_2015_01.nc'
 
-out_file = f'./Inputs/grid_metrics/grid_metrics_atmosphere.nc'
+out_file = f'../Inputs/grid_metrics/grid_metrics_atmosphere.nc'
 
 create_arakawa_a_grid_metrics_file(in_file,
                                    lon_var_name='longitude',

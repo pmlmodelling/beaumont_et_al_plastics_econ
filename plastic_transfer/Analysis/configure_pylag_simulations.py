@@ -43,7 +43,7 @@ def get_root_run_directory():
 
 
 def get_input_paths():
-    inputs_dir = './Inputs'
+    inputs_dir = '../Inputs'
     ocean_forcing_dir = cmems_data_dir
     atmos_forcing_dir = era5_data_dir
 
