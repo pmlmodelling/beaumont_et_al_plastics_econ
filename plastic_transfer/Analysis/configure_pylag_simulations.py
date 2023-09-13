@@ -25,8 +25,13 @@ and the grid metrics file.
 Notes
 -----
 
-- In this step, we allow for paths being different depending
-on whether the model is run on a PML desktop or on ARCHER2.
+- Here, we only create setups for Belgium and the single year
+2000. A set of 12 runs will be created, one for each month of
+the year. To create the full transfer matrix, this step must
+be repeated for all countries and all years from 2000 to 2015.
+
+- The run script is created in the Simulation directory. The
+simulations must be run from this directory.
 """
 import os
 import pathlib
@@ -34,6 +39,7 @@ import stat
 import configparser
 
 from project_paths import cmems_data_dir, era5_data_dir, simulations_dir
+
 
 def get_root_run_directory():
     root_dir = simulations_dir
