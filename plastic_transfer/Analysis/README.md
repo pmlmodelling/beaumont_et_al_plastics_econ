@@ -12,7 +12,14 @@ command in the terminal:
 conda install --yes --file requirements.txt
 ```
 
-If the installation takes a long time, consider using *mamba* instead of *conda*.
+If the installation takes a long time, consider using *mamba* instead of *conda*. With Mamba, the command would be:
+
+```bash
+conda install --yes mamba
+mamba install --yes --file requirements.txt
+```
+
+and installation times should be less than one minute.
 
 ## Contents
 
