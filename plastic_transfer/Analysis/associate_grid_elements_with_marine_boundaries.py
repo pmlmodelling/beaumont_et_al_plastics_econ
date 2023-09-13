@@ -117,7 +117,7 @@ def flag_elements_multiprocessing(lons, lats, country_geometry, valid_elements,
 
 # Read in grid data
 # -----------------
-grid_metrics_file_name = './Inputs/grid_metrics/grid_metrics_surface_ocean.nc'
+grid_metrics_file_name = '../Inputs/grid_metrics/grid_metrics_surface_ocean.nc'
 grid_metrics = Dataset(grid_metrics_file_name)
 lons = grid_metrics['longitude_c'][:]
 lats = grid_metrics['latitude_c'][:]
@@ -178,7 +178,7 @@ for boundary_type in boundary_types:
     flag_elements_switch = True
     if flag_elements_switch:
         # Make output directory
-        out_dir = f'./Derived_data/grid_elements/{boundary_type}'
+        out_dir = f'../Derived_data/grid_elements/{boundary_type}'
         pathlib.Path(out_dir).mkdir(parents=True, exist_ok=True)
         
         for country in na_countries:
