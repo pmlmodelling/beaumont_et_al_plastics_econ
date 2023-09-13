@@ -26,3 +26,7 @@ instructions on how to download each of the datasets is provided in a collection
 ## Running the model
 
 Simplified configration and analysis scripts can be found in the `./Analysis` directory. More details on the functionality of each script can be found in the README `./Analysis/README.md`.
+
+## Results
+
+Tables giving the stock matrix for the years 2012, 2013 and 2014 can be found in the `Results` directory.
