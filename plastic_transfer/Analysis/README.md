@@ -39,4 +39,5 @@ python build_cython_modules.py build_ext --inplace
 * `configure_pylag_simulations.py` - Script to configure PyLag simulations. This also creates run script(s) in your simulations directory, which must be executed.
 * `associate_grid_elements_with_marine_boundaries.py` - Script which associates ocean elements with EEZs. This is used to simplify the calculation of stocks.
 * `compute_connectivity_metrics.py` - Script which flags whether or not particles are in a given EEZ at a given point in time. The emitting country is passed in as a command line argument (e.g. Belgium).
+* `create_weights_decay_coefficients_file.py` - Script to create particle weights decay coefficients. These are used when computing stocks.
 * `compute_plastic_stock_in_eezs.py` - Script which computes the mass of plastic in each EEZ.
